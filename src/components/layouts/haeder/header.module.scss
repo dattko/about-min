@@ -1,0 +1,31 @@
+.header{
+  height: 60px;
+  background-color: rgba($color: #fff, $alpha: 0.6);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    height: 100%;
+    max-width: 1600px;
+  }
+
+  &Logo{
+
+  }
+
+  &Ul{
+    display: flex;
+    align-items: center;
+  }
+}
+
+

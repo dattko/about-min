@@ -20,16 +20,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@api/*": ["src/app/api/*"],
       "@style/*": ["src/styles/*"],
-      "@component/*": ["src/componenets/*"],
-      "@page/*": ["src/pages/*"],
-      "@type/*": ["src/types/*"],
-      "@modal/*": ["src/componenets/modal/*"],
-      "@redux/*": ["src/redux/*"],
-      "@hook/*": ["src/hooks/*"],
+      "@component/*": ["src/components/*"],
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts",],
   "exclude": ["node_modules"]
 }
