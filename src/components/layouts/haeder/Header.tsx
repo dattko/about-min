@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/components/layouts/haeder/Header.module.scss';
+import styles from './Header.module.scss';
 import Link from 'next/link';
 import { menuItems } from '@/data/menu/menuItems';
 
