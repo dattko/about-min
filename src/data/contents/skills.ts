@@ -56,7 +56,7 @@ export const skills : Skill[] = [
     url: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg'
   },
   {
-    id : 10,
+    id : 11,
     name: 'GitLab',
     url: 'https://images.ctfassets.net/xz1dnu24egyd/3FbNmZRES38q2Sk2EcoT7a/a290dc207a67cf779fc7c2456b177e9f/press-kit-icon.svg'
   }

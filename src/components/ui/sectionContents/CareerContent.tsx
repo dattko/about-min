@@ -45,8 +45,8 @@ const CareerContent = () => {
               <span className={styles.project__date}>{project.period}</span>
             </div>
             <div className={styles.project__detail}>
-              {project.details.map((detail) => (
-                <span key={project.id}>• {detail}</span>
+              {project.details.map((detail, index) => (
+                <span key={index}>• {detail}</span>
               ))}
             </div>
           </div>
