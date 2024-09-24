@@ -6,8 +6,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'src/styles')],
-    prependData: `@import "functions.scss"; @import "mixin.scss"; @import "base.scss";`,
+    includePaths: [path.join(__dirname, './src')],
+    prependData: `@import "styles/functions.scss"; @import "styles/mixin.scss"; @import "styles/base.scss";`,
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   reactStrictMode: true,
