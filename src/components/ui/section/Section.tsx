@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Section.module.scss';
+import styles from '@/components/ui/section/Section.module.scss';
 interface SectionProps {
   title?: string;
   children: React.ReactNode;
