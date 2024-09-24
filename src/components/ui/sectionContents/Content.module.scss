@@ -1,0 +1,234 @@
+//공통
+.selmiBold{
+  font-weight: 600;
+}
+
+//메인 섹션
+.intro{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__title{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  &__subtitle{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  &__text{
+    font-size: $fontSizeLarge;
+    line-height: 1.2;
+  }
+}
+
+.image__wrap{
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+
+
+//기술 섹션
+.skills{
+
+  &__wrap{
+    width: 100%;
+    padding: 50px 60px;
+    background-color: $colorOrage;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: $colorWhite;
+    padding: 14px 32px;
+    height: 62px;
+    border-radius: 30px;
+  }
+  &__img{
+    height: 100%;
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title{
+    font-size: $fontSizeLarge;
+    font-weight: 600;
+    color: $colorGray !important;
+
+  }
+}
+
+//캐리어
+.career{
+
+  &__card{
+    width: 100%;
+    border: 1px solid $colorGrayLight;
+    border-radius: 8px;
+    padding: 60px 40px;
+    display: flex;
+    // flex-direction: column;
+    position: relative;
+    gap: 40px;
+    background-color: $colorWhite;
+
+  }
+  &__company{
+    min-width: 20%;
+    // position: sticky;
+    // top: 10%;
+    // left: 0;
+    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    &__title{
+      font-weight: 700;
+      font-size: $fontSizeTitle;
+      &:hover{
+          text-decoration: underline;
+          text-underline-offset: 8px;
+      }
+    }
+
+    &__date{
+      font-size: $fontSizeXLarge;
+      font-weight: 600;
+      color: $colorGray;
+    }
+  }
+
+  &__img{
+    width: 100%;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__line{
+    width: 1px;
+    background-color: $colorGrayLight;
+    align-self: stretch;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+      
+      &__intro{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-bottom: 1px solid $colorGrayLight;
+        padding-bottom: 20px;
+        span{
+          line-height: 1.3;
+          letter-spacing: .6px;
+        }
+      }
+      &__projects{
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+
+      .project{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        &__header{
+          display: flex;
+          align-items: flex-end;
+          gap: 6px;
+        }
+        &__title{
+          font-weight: 600;
+        }
+        &__date{
+          font-weight: 500;
+          font-size: $fontSizeSmall;
+          color: $colorGrayLight;
+          padding-left: 6px;
+        }
+        &__detail{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          span{
+            font-size: $fontSizeSmall;
+          }
+        }
+      }
+  }
+}
+
+//프로젝트
+.portfolio{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  align-self: flex-start;
+  &:nth-child(1){
+    position: sticky;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+    &__git{
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $colorRaspberry;
+      color: $colorWhite;
+      font-size: 28px;
+      position: absolute;
+      font-weight: 600;
+      bottom: calc(100% - 80px);
+      right: calc(100% - 50px);
+      &:hover{
+        background-color: $colorWhite;
+        color: $colorRaspberry;
+      }
+    }
+    &__comment{
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $colorGray;
+      position: relative;
+    }
+  &__image{
+    width: 100%;
+    height: 340px;
+    background-color: $colorWhite;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

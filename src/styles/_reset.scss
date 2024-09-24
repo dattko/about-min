@@ -1,9 +1,10 @@
 *{margin:0;padding:0;box-sizing: border-box;}
 li,ol,ul{list-style: none;}
-body{font-family: Pretendard, sans-serif;}
+body{font-family: Pretendard, sans-serif; background-color: #F5F7F8; line-height: 1; overscroll-behavior-y: none;}
 img, picture, video, canvas, svg {display: block;max-width:100%;object-fit: cover;max-height: 100%;
 }
 button {background:none;border:0;cursor:pointer; display: flex; align-items: center; justify-content: center; transition: .2s ease; color: #000;}
-a{text-decoration:none; cursor: pointer; color: #000; }
+a{text-decoration:none; cursor: pointer; color: #000;}
 table {border-collapse:collapse;border-spacing:0}
 *:after,*::before{display: flex; }
+a,span{color: $colorBlack;}

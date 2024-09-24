@@ -1,32 +1,46 @@
-.header{
-  height: 80px;
-  background-color: rgba($color: #fff, $alpha: 0.6);
-  position: sticky;
+.header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-
-  &Container{
+  height: 64px;
+z-index: 10;
+  &__container { 
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 0 20px;
     height: 100%;
-    max-width: 1600px;
   }
 
-  // &Logo{
-
-  // }
-
-  &Ul{
+  &__nav {
+    flex: 1;
+    justify-content: center;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px;  
+    a{
+      padding: 0 26px;
+      background-color: rgba($color: $colorNavy, $alpha: .8);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 23px;
+      font-weight: 600;
+      color: $colorWhite;
+      transition: $transition;
+      &:hover{
+        background-color: $colorNavy;
+      }
+    }
+  }
+  
+  &__logo {
+    font-size: 32px;
+    font-weight: 600;
+    @include gradient-text($colorNavy 30%, $colorGrayLight 80%, 120deg);
   }
 }
-
-

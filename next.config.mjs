@@ -7,16 +7,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
-    prependData: `@import "functions.scss"; @import "mixin.scss";`,
-  },
-  experimental: {
-    scrollRestoration: false,
-  },
-  compiler: {
-    styledComponents: true,
+    prependData: `@import "functions.scss"; @import "mixin.scss"; @import "base.scss";`,
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  reactStrictMode: false,
+  reactStrictMode: true,
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
