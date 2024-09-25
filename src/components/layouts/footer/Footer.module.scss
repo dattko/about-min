@@ -1,9 +1,11 @@
 .footer {
   background-color: $colorNavy;
   padding: 80px 20px;
-
+  @include responsive($breakpointLarge){
+    padding: 60px 16px;
+  };
   &__container {
-    max-width: 1200px;
+    max-width: 1080px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -12,13 +14,19 @@
     a,span{
       color: $colorGrayLight;
     }
+
+    @include responsive($breakpointMedium){
+      flex-direction: column;
+      gap: 20px;
+      align-items: center
+    };
   }
 
 
   &__nav {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 16px;
 
     a {
       text-decoration: none;
@@ -31,7 +39,9 @@
   &__social {
     display: flex;
     gap: 12px;
-
+    @include responsive($breakpointLarge){
+      gap: 8px;
+    };
     a {
       padding: 12px 0;
       border-radius: 4px;
@@ -48,10 +58,18 @@
         color: #0077b5;
         background-color: rgba($color: $colorGrayLight, $alpha: .2);
       }
+      @include responsive($breakpointLarge){
+        padding: 10px 0;
+        width: 62px;
+        font-size: $fontSizeXSmall;
+      };
     }
   }
 
   &__text {
     font-size: $fontSizeSmall;
+    @include responsive($breakpointLarge){
+      font-size: $fontSizeXSmall;
+    };
   }
 }

@@ -1,6 +1,14 @@
 .main{
   &__section{
     padding-top: 64px;
+
+    @include responsive($breakpointLarge){
+      padding-top: 48px;
+    };
+
+    @include responsive($breakpointMedium){
+      padding-top: 40px;
+    };
   }
 }
 
@@ -25,8 +33,15 @@
   &__title{
     font-size: $fontSizeTitle;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 1.6px;
     color: $colorBlack;
+    @include responsive($breakpointLarge){
+      font-size: $fontSizeLarge;
+    };
+    
+    @include responsive($breakpointMedium){
+      font-size: $fontSizeMedium;
+    };
   }
   &__container{
     max-width: $maxWidth;
@@ -35,6 +50,14 @@
     gap: 42px;
     display: flex;
     flex-direction: column;
+    @include responsive($breakpointLarge){
+      gap: 26px;
+      padding: 80px 16px;
+    };
+
+    @include responsive($breakpointMedium){
+      gap: 20px
+    };
   }
 
   .content{
@@ -43,9 +66,21 @@
     justify-content: center;
     gap: 80px;
     position: relative;
+
+    @include responsive($breakpointMedium){
+      flex-direction: column
+    };
     &__col{
       flex-direction: column;
     }
+
+    @include responsive($breakpointLarge){
+      gap: 40px
+    };
+
+    @include responsive($breakpointMedium){
+      gap: 32px
+    };
   }
 }
 
