@@ -12,7 +12,7 @@ const Footer = () => {
             <Link href="https://github.com/dattko" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <GitBranch size={20} /> GitHub
             </Link>
-            <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://linkedin.com/in/dattko" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin size={20} /> LinkedIn
             </Link>
             <Link href="mailto:jhwangmin@gmail.com" aria-label="Email">

@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <ContactMe />
+        {/* <ContactMe /> */}
         <Footer/>
       </body>
     </html>

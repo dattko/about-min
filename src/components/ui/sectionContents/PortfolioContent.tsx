@@ -25,9 +25,14 @@ const PortfolioContent = () => {
     <>
       <div className={styles.portfolio}>
           <Link className={styles.portfolio__git} href='https://github.com/dattko' target='_blank'>Go to git</Link>
-          <span className={styles.portfolio__comment}>
-            Turning Ideas into Code,<br /> Code into Reality
-          </span>
+            <span className={styles.portfolio__comment}>
+                <span>Turning Ideas into Code,</span>
+                <span>아이디어를 코드로,</span>
+            </span>
+            <span className={styles.portfolio__comment} >
+              <span>Code into Reality,</span>
+              <span>코드를 현실로</span>
+            </span>
       </div>
       <div className={styles.portfolio}>
         {portfolios.map((portfolio) => (
