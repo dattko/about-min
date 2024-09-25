@@ -9,6 +9,11 @@
     @include responsive($breakpointMedium){
       padding-top: 40px;
     };
+    .content{
+      @include responsive($breakpointMedium){
+        gap: 42px !important;
+      };
+    }
   }
 }
 

@@ -1,10 +1,16 @@
+'use client';
 import React from 'react';
 import styles from './Header.module.scss';
-import Link from 'next/link';
 import { menuItems } from '@/data/menu/menuItems';
+import { useScroll } from '@/contexts/ScrollContext';
 
 const Header = () => {
+  const { scrollTo } = useScroll();
 
+  const handleClick = (e: React.MouseEvent<HTMLElement>, id: string) => {
+    e.preventDefault();
+    scrollTo(id);
+  };
 
   return (
     <header className={styles.header}>
@@ -13,11 +19,9 @@ const Header = () => {
         <nav className={styles.header__nav}>
           {menuItems.map((item) => (
             <li key={item.id}>
-              <Link 
-                href={`#${item.link}`} 
-              >
+              <button onClick={(e) => handleClick(e , item.link)}>
                 {item.name}  
-              </Link>
+              </button>
             </li>
           ))}
         </nav>
