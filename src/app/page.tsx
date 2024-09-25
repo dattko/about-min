@@ -5,16 +5,16 @@ export default function Home() {
 
   return (
     <div>
-      <Section main black>
+      <Section main black id='about'>
         <IntroContent />
       </Section>
-      <Section black title='기술 스택'>
+      <Section black title='기술 스택' id='skills'>
         <SkillsContent />
       </Section>
-      <Section title='경력'>
+      <Section title='경력' id='career'>
         <CareerContent />
       </Section>
-      <Section backColor='#FECC6A'>
+      <Section backColor='#FECC6A' id='projects'>
         <PortfolioContent/>
       </Section>
     </div>

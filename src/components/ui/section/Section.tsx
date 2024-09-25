@@ -8,12 +8,14 @@ interface SectionProps {
   black?: boolean;
   style?: React.CSSProperties;
   backColor?: string;
+  id?: string;
 }
 
-const Section : React.FC< SectionProps> = (({ title, children, main, col, black, style, backColor }) => {
+const Section : React.FC< SectionProps> = (({ title, children, main, col, black, style, backColor, id }) => {
   return (
     <section 
-     style={backColor ? { backgroundColor: backColor, ...style } : style}
+      id={id}
+      style={backColor ? { backgroundColor: backColor, ...style } : style}
       className={`
         ${main ? styles.main__section : ''} 
         ${styles.section} ${black ? styles.section__black : null}
