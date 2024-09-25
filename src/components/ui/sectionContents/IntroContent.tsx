@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styles from './Content.module.scss';
 
 const IntroContent = () => {
@@ -13,7 +12,7 @@ const IntroContent = () => {
         <span className={styles.intro__text}>함께 성장할 수 있는 기회를 기대합니다.</span>
       </div>
       <div className={styles.image__wrap}>
-        {/* 이미지가 필요하다면 여기에 추가하세요 */}
+        <img src="/images/profile.jpeg" alt="profile" />
       </div>
     </>
   );
