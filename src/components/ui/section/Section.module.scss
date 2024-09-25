@@ -41,6 +41,7 @@
     
     @include responsive($breakpointMedium){
       font-size: $fontSizeMedium;
+      text-align: center
     };
   }
   &__container{
