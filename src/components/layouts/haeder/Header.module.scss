@@ -57,6 +57,8 @@
       transition: $transition;
       font-size: $fontSizeSmall;
 
+
+
       &:hover{
         background-color: $colorNavy;
       }
@@ -71,6 +73,16 @@
         padding: 0 12px;
       };
     }
+    @for $i from 1 through 4 {
+      li{
+        transform: translateY(calc(-100% - 12px));
+        animation: menuDown .5s ease forwards;
+        &:nth-child(#{$i}) {
+          animation-delay: 0.26s * $i; 
+      }
+      }
+    }
+
   }
   
   &__logo {
@@ -85,5 +97,15 @@
     @include responsive($breakpointMedium){
       font-size: 18px
     };
+  }
+}
+
+
+@keyframes menuDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
