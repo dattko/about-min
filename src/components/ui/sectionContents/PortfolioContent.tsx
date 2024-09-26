@@ -6,6 +6,7 @@ import { portfolios } from '@/data/contents/portfolio';
 import { Link as Site } from 'lucide-react';
 import Modal from '@component/modal/ImageModal';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 const PortfolioContent = () => {
@@ -42,10 +43,14 @@ const PortfolioContent = () => {
             <div className={styles.portfolio__image}>
               {portfolio.image.length > 1 ? (
                 <Swiper
+                  modules={[Autoplay, Pagination]}
                   slidesPerView={1}
                   loop={true}
-                  autoplay={{ delay: 3000 }}
-                  pagination={{ clickable: false }}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
+                  pagination={{ clickable: true }}
                 >
                   {portfolio.image.map((image, index) => (
                     <SwiperSlide key={index}>
