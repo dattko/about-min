@@ -5,7 +5,11 @@ import ContactMe from '@/components/button/ContactMe';
 import Footer from '@component/layouts/footer/Footer';
 import { ScrollProvider } from '@/contexts/ScrollContext';
 export const metadata: Metadata = {
-  title: "about-min"
+  title: "about-min",
+  description: "저의 포트폴리오 사이트입니다.",
+  icons: {
+		icon: "/favicon.png",
+	},
 };
 
 export default function RootLayout({
@@ -23,6 +27,6 @@ export default function RootLayout({
           <Footer/>
         </ScrollProvider>
       </body>
-    </html>
+  </html>
   );
 }
