@@ -44,10 +44,10 @@
       font-size: $fontSizeLarge;
     };
     
-    @include responsive($breakpointMedium){
-      font-size: $fontSizeMedium;
-      text-align: center
-    };
+    // @include responsive($breakpointMedium){
+    //   font-size: $fontSizeMedium;
+    //   text-align: center
+    // };
   }
   &__container{
     max-width: $maxWidth;
