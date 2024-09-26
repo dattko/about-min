@@ -65,7 +65,7 @@
 
       @include responsive($breakpointLarge){
         padding: 0 16px;
-        // height: 26px;
+        // height: 26px;xpx
         font-size: $fontSizeXSmall;
       };
 
@@ -76,7 +76,7 @@
     @for $i from 1 through 4 {
       li{
         transform: translateY(calc(-100% - 12px));
-        animation: menuDown .5s ease forwards;
+        animation: menuDown .5s ease-out forwards;
         &:nth-child(#{$i}) {
           animation-delay: 0.26s * $i; 
       }

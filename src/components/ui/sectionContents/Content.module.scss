@@ -373,6 +373,8 @@
   // gap: 50px;
   position: relative;
   align-self: flex-start;
+  min-width: 0;
+  width: 100%;
     &:nth-child(1){
       position: sticky;
       top: 50%;
