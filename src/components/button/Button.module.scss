@@ -5,7 +5,9 @@
   right: 20px;
   z-index: 20;
   transform: translateY(50%);
-
+  @include responsive($breakpointMedium){
+    right: 12px;
+  };
 
   span{
     border-radius: 30px;
