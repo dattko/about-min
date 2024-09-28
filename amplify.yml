@@ -7,7 +7,7 @@ frontend:
     build:
       commands:
         - NEXT_APP_EMAIL=${NEXT_APP_EMAIL}
-        -NEXT_APP_PWD=${NEXT_APP_PWD}
+        - NEXT_APP_PWD=${NEXT_APP_PWD}
         - npm run build
   artifacts:
     baseDirectory: .next
