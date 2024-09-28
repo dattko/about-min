@@ -2,21 +2,22 @@
 .contact{
   position: fixed;
   bottom: 50%;
-  right: 0;
-  padding-right: 20px;
+  right: 20px;
   z-index: 20;
   transform: translateY(50%);
   @include responsive($breakpointMedium){
-    padding-right: 12px;
+    right: 12px;
   };
 
   a{
+    align-self: center;
     border-radius: 30px;
     background-color: rgba($color: $colorNavy, $alpha: .6);
     color: $colorWhite;
     letter-spacing: 1.2px;
     font-weight: 700;
-    padding: 24px 12px;
+    width: 42px;
+    padding: 24px 0;
     transform: rotate(180deg) ;
     writing-mode: vertical-rl;
     font-size: $fontSizeLarge;

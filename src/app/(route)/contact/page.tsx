@@ -10,8 +10,8 @@ const Contact = () => {
     <Section main black>
       <div className={styles.contactContainer}>
         <div className={styles.intro}>
-          <span className={styles.h2}>함께 일해볼까요?</span>
-          <span>새로운 기회와 협업을 환영합니다. 언제든 연락 주세요!</span>
+          <span className={styles.h2}>새로운 기회와 협업을 환영합니다.</span>
+          <span>언제든 연락 주세요!</span>
         </div>
 
         <div className={styles.contactMethods}>
