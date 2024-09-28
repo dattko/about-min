@@ -1,0 +1,35 @@
+.messageForm {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 16px 12px;
+    resize: none;
+    font-size: $fontSizeSmall;
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: $colorGrayLight;
+    height: 42px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    gap: 8px;
+    font-size: $fontSizeSmall;
+    border-radius: 4px;
+    &:hover {
+      background-color: $colorGray;
+    }
+  }
+}

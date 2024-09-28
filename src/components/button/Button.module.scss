@@ -4,5 +4,22 @@
   bottom: 50%;
   right: 20px;
   z-index: 20;
-  background-color: $colorWhite;
+  transform: translateY(50%);
+
+
+  span{
+    border-radius: 30px;
+    background-color: rgba($color: $colorNavy, $alpha: .6);
+    color: $colorWhite;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    padding: 24px 12px;
+    transform: rotate(180deg) ;
+    writing-mode: vertical-rl;
+    font-size: $fontSizeLarge;
+    text-transform: uppercase;
+    &:hover{
+      background-color: $colorNavy;
+    }
+  }
 }

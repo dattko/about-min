@@ -1,0 +1,47 @@
+.modal__wrap {
+  position: fixed;
+  top: - 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 24px);
+  max-width: 300px;
+  animation: downStateBar 6s ease forwards;
+}
+
+.modal__content {
+  background-color: white;
+  position: relative;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+width: 100%;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+}
+
+.modal__text {
+  text-align: center;
+  font-size: $fontSizeSmall;
+}
+
+@keyframes downStateBar {
+  0% {
+    top: -50px;
+  }
+  15% {
+    top: 20px;
+  }
+  85% {
+    top: 20px;
+  }
+  100% {
+    top: -50px;
+  }
+}

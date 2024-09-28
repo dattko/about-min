@@ -25,9 +25,4 @@ export const menuItems:MenuItem[] = [
     name: '프로젝트',
     link: 'projects'
   },
-  // {
-  //   id : 5,
-  //   name: '콘택트',
-  //   link: 'contact'
-  // }
 ];

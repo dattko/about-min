@@ -11,15 +11,16 @@ interface SectionProps {
   black?: boolean;
   style?: React.CSSProperties;
   backColor?: string;
-  id: string;
+  id?: string;
 }
 
 const Section: React.FC<SectionProps> = ({ title, children, main, col, black, style, backColor, id }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const { addRef } = useScroll();
 
+  
   useEffect(() => {
-    addRef(id, sectionRef);
+    {id && addRef(id, sectionRef);}
   }, [id, addRef]);
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '@/components/ui/section/Section';
 import { IntroContent, SkillsContent, CareerContent, PortfolioContent } from '@/components/ui/sectionContents';
+import ContactMe from '@/components/button/ContactMe';
 export default function Home() {
 
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Section backColor='#FECC6A' id='projects'>
         <PortfolioContent/>
       </Section>
+      <ContactMe />
     </div>
   );
 }

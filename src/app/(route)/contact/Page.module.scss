@@ -1,0 +1,52 @@
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  .h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.contactMethods {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: rgba($color: $colorWhite, $alpha: .2);
+    color: white;
+    border-radius: 32px;
+    transition: transform 0.2s, background-color 0.2s;
+    gap: 8px;
+    &:hover {
+      transform: translateY(-3px);
+      background-color: var(--primary-color-dark);
+    }
+  }
+}
+
+.text {
+  margin-bottom: 12px;
+  // padding: 16px 0;
+  border-radius: 8px;
+
+  span {
+    font-size: $fontSizeSmall;
+    color: $colorRed !important;
+  }
+}
+
+
+
+

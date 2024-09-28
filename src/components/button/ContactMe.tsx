@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 const ContactMe = () => {
   return (
     <Link href="/contact"  className={styles.contact}>
-      <button>문의하기</button>
+      <span>contact me</span>
     </Link>
   );
 }
