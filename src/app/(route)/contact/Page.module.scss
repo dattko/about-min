@@ -8,9 +8,17 @@
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
+  span{
+    @include responsive($breakpointMedium){
+      font-size: $fontSizeSmall;
+    };
+  }
   .h2 {
     font-size: 32px;
     margin-bottom: 16px;
+    @include responsive($breakpointMedium){
+      font-size: 24px;
+    };
   }
 }
 
@@ -19,7 +27,9 @@
   justify-content: center;
   gap: 24px;
   margin-bottom: 32px;
-
+  @include responsive($breakpointMedium){
+    gap: 12px;
+  };
   a {
     display: flex;
     align-items: center;
@@ -33,6 +43,12 @@
       transform: translateY(-3px);
       background-color: var(--primary-color-dark);
     }
+
+    @include responsive($breakpointMedium){
+      padding: 8px 12px;
+      gap: 4px;
+      font-size: $fontSizeXSmall;
+    };
   }
 }
 
@@ -44,6 +60,9 @@
   span {
     font-size: $fontSizeSmall;
     color: $colorRed !important;
+    @include responsive($breakpointMedium){
+      font-size: $fontSizeXSmall;
+    };
   }
 }
 
