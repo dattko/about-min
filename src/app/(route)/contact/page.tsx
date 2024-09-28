@@ -21,9 +21,9 @@ const Contact = () => {
             <Link href="https://linkedin.com/in/dattko" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin size={20} /> LinkedIn
             </Link>
-            <Link href="mailto:jhwangmin@gmail.com" aria-label="Email">
+            {/* <Link href="mailto:jhwangmin@gmail.com" aria-label="Email">
               <Mail size={20} /> Mail
-            </Link>
+            </Link> */}
             <Link href="sms:01055611680" aria-label="sms">
               <Smartphone size={20} /> sms
             </Link>
