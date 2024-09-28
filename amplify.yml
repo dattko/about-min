@@ -4,8 +4,10 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        - node -e "console.log('NEXT_APP_EMAIL:', process.env.NEXT_APP_EMAIL)"
-        - node -e "console.log('NEXT_APP_PWD:', process.env.NEXT_APP_PWD ? '[REDACTED]' : 'Not set')"
+        - |
+          node -e "console.log('NEXT_APP_EMAIL:', process.env.NEXT_APP_EMAIL)"
+        - |
+          node -e "console.log('NEXT_APP_PWD:', process.env.NEXT_APP_PWD ? '[REDACTED]' : 'Not set')"
         - |
           if [ -n "$NEXT_APP_EMAIL" ] && [ -n "$NEXT_APP_PWD" ]; then
             echo "NEXT_APP_EMAIL=$NEXT_APP_EMAIL" >> .env.production
