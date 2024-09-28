@@ -4,8 +4,8 @@ import { sendEmail } from '@/lib/email';
 export async function POST(request: Request) {
   console.log('POST request received at /api/contact');
   console.log('Environment variables:', {
-    NEXT_APP_EMAIL: process.env.NEXT_APP_EMAIL ? '[SET]' : '[NOT SET]',
-    NEXT_APP_PWD: process.env.NEXT_APP_PWD ? '[SET]' : '[NOT SET]',
+    NEXT_PUBLIC_EMAIL: process.env.NEXT_PUBLIC_EMAIL ? '[SET]' : '[NOT SET]',
+    NEXT_PUBLIC_PWD: process.env.NEXT_PUBLIC_PWD ? '[SET]' : '[NOT SET]',
   });
 
   try {

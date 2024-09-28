@@ -5,8 +5,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.NEXT_APP_EMAIL,
-    pass: process.env.NEXT_APP_PWD,
+    user: process.env.NEXT_PUBLIC_EMAIL,
+    pass: process.env.NEXT_PUBLIC_PWD,
   },
 
 });
@@ -25,7 +25,7 @@ type MailOptionType = {
 
 export function sendEmail({title, message }: ContactType) {
 	const mailOptions: MailOptionType = {
-		to: process.env.NEXT_APP_EMAIL || '',
+		to: process.env.NEXT_PUBLIC_EMAIL || '',
 		subject: `${title}`,
 		html: `
     		<h1>${title}</h1>
