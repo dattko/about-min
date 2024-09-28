@@ -1,15 +1,16 @@
 // contact
 .contact{
-  position: absolute;
+  position: fixed;
   bottom: 50%;
-  right: 20px;
+  right: 0;
+  padding-right: 20px;
   z-index: 20;
   transform: translateY(50%);
   @include responsive($breakpointMedium){
-    right: 12px;
+    padding-right: 12px;
   };
 
-  span{
+  a{
     border-radius: 30px;
     background-color: rgba($color: $colorNavy, $alpha: .6);
     color: $colorWhite;

@@ -4,9 +4,11 @@ import styles from './Button.module.scss';
 
 const ContactMe = () => {
   return (
-    <Link href="/contact"  className={styles.contact}>
-      <span>contact me</span>
-    </Link>
+    <div className={styles.contact}>
+      <Link href="/contact">
+        contact me
+      </Link>
+    </div>
   );
 }
 

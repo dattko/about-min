@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import styles from './EmailForm.module.scss';
-import { sendContactEmail } from '@/app/api/contact';
+import { sendContactEmail } from '@/lib/contact';
 import AlertModal from '@/components/modal/alert/AlertModal';
 
 const initialState = {
