@@ -89,9 +89,11 @@ const PortfolioContent = () => {
                 {portfolio.state === 'preparing' && <span className={styles.portfolio__state}> - 작업 중...</span>}
               </span>
               <span className={styles.portfolio__subtitle}>{portfolio.description}</span>
-              <Link href={portfolio.link} target='_blank' className={styles.portfolio__link}>
-                <Site size={16} /> 바로가기
-              </Link>
+              {portfolio.link &&
+                <Link href={portfolio.link} target='_blank' className={styles.portfolio__link}>
+                  <Site size={16} /> 바로가기
+                </Link>
+              }
 
 
             </div>
