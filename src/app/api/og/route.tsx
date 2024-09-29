@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
       (
         <div
           style={{
-            background: 'linear-gradient(to right, #232D3F, #FECC6A)',
+            background: '#FECC6A',
             width: '100%',
             height: '100%',
             display: 'flex',
@@ -23,8 +23,8 @@ export async function GET(req: NextRequest) {
         >
           <div
             style={{
-              fontSize: 60,
-              fontWeight: 'bold',
+              fontSize: 100,
+              fontWeight: '800',
               color: 'white',
               textAlign: 'center',
               padding: '0 20px',
