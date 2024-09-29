@@ -77,7 +77,13 @@ const PortfolioContent = () => {
                   )
               )}
             </div>
+
             <div className={styles.portfolio__text}>
+            <div className={styles.portfolio__skills}>
+                {portfolio.skills.map((skill, index) => (
+                  <span key={index} className={styles.portfolio__skill}>{skill}</span>
+                ))}
+              </div>
               <span className={styles.portfolio__title}>
                 {portfolio.title}
                 {portfolio.state === 'preparing' && <span className={styles.portfolio__state}> - 작업 중...</span>}
@@ -86,6 +92,8 @@ const PortfolioContent = () => {
               <Link href={portfolio.link} target='_blank' className={styles.portfolio__link}>
                 <Site size={16} /> 바로가기
               </Link>
+
+
             </div>
           </div>
         ))}
