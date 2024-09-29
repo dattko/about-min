@@ -13,7 +13,9 @@ export const portfolios : Portfolio[] = [
     id: 'portfolio-1',
     title: 'AboutMin',
     description: '나의 경력과 열정을 간결하고 매력적으로 표현하는 공간입니다. 사용자 친화적인 디자인과 구조로 구성되어, 방문자가 내 전문성을 쉽게 이해하고 기억할 수 있도록 돕습니다. 개인의 가치와 목표를 효과적으로 전달하여, 나의 브랜드를 한눈에 볼 수 있는 페이지입니다.',
-    image: [],
+    image: [
+      'aboutMin'
+    ],
     skills: ['React', 'Next.js', 'TypeScript', 'SCSS', 'AWS Amplify', 'Responsive', 'Layout Design' ]
     },
     {

@@ -486,6 +486,9 @@
     display: flex;
     height: 340px;
     background-color: $colorWhite;
+    border: 2px solid $colorWhite;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
     img{
       object-fit: cover;
       object-position: center;

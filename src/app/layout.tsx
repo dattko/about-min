@@ -7,7 +7,7 @@ import { ScrollProvider } from '@/contexts/ScrollContext';
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "AboutMin"
-  const description = "저의 포트폴리오 사이트입니다."
+  const description = "장황민 프론트엔드 개발자 포트폴리오 사이트입니다."
 
   return {
     title: {
