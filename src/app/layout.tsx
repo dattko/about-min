@@ -15,6 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${title}`,
     },
     description,
+    alternates: {
+      canonical: "https://aboutmin.info",
+    },
     icons: {
       icon: "/favicon.png",
     },
@@ -25,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: title,
       images: [
         {
-          url: `/api/og?title=${encodeURIComponent(title)}`,
+          url: `https://aboutmin.info/api/og?title=${encodeURIComponent(title)}`,
           width: 1200,
           height: 630,
         },
@@ -37,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`/api/og?title=${encodeURIComponent(title)}`],
+      images: [`https://aboutmin.info/api/og?title=${encodeURIComponent(title)}`],
     },
     keywords: ["portfolio", "AboutMin", "portfolio site", "포트폴리오", "포트폴리오 사이트", "프론트엔드 포트폴리오", "어바웃민"],
   }
