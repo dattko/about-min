@@ -10,21 +10,14 @@ interface ScrollContextType {
 const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 
 export const ScrollProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isClient, setIsClient] = useState(false);
   const refsRef = useRef<{ [key: string]: MutableRefObject<HTMLElement | null> }>({});
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const addRef = (key: string, ref: MutableRefObject<HTMLElement | null>) => {
     refsRef.current[key] = ref;
   };
 
   const scrollTo = (id: string) => {
-    if (isClient && refsRef.current[id] && refsRef.current[id].current) {
       refsRef.current[id].current?.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
