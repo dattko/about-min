@@ -2,12 +2,9 @@
 .contact{
   position: fixed;
   bottom: 50%;
-  right: 20px;
+  right: 10px;
   z-index: 20;
   transform: translateY(50%);
-  @include responsive($breakpointMedium){
-    right: 12px;
-  };
 
   a{
     align-content: center;
