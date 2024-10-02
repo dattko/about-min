@@ -7,7 +7,7 @@ import EmailForm from '@/components/ui/sectionContents/email/EmailForm';
 const Contact = () => {
 
   return (
-    <Section main black>
+    <Section main black style={{minHeight: 'calc(100dvh - 216px)'}}>
       <div className={styles.contactContainer}>
         <div className={styles.intro}>
           <span className={styles.h2}>새로운 기회와 협업을 환영합니다.</span>

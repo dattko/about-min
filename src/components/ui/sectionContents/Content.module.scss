@@ -487,6 +487,9 @@
     display: flex;
     height: 340px;
     background-color: $colorWhite;
+    border: 2px solid $colorWhite;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
     img{
       object-fit: cover;
       object-position: center;
@@ -502,17 +505,15 @@
   }
   
   &__text{
-    padding: 26px 32px;
+    padding: 20px 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    @include responsive($breakpointLarge){
-      padding: 20px 24px;
-      gap: 8px;
-    };
+    // @include responsive($breakpointLarge){
+    //   gap: 8px;
+    // };
     @include responsive($breakpointMedium){
       padding: 16px 20px;
-      gap: 6px;
     };
   }
   
@@ -570,6 +571,37 @@
     &:hover{
       color: $colorCoral;
     }
+  }
+
+  &__skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+  }
+
+  &__skill{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    // border: 1px solid $colorGray;
+    padding: 0 10px;
+    background-color: rgba($color: $colorGray, $alpha: .1);
+    font-size: $fontSizeSmall;
+    font-weight: 600;
+    color:  $colorGray;
+    height: 28px;
+    border-radius: 8px;
+    &:hover{
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    @include responsive($breakpointLarge){
+      padding: 0 10px;
+    };
+
+    @include responsive($breakpointMedium){
+      padding: 0 8px;
+    };
   }
 }
 
