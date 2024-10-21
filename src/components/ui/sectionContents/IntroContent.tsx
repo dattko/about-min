@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './Content.module.scss';
 import Image from 'next/image';
-const IntroContent = () => {
+import { getProfileImageUrl } from '@/lib/action/action';
+
+const IntroContent = async () => {
+  const profileImageUrl = await getProfileImageUrl();
+
   return (
     <>
       <div className={styles.intro}>
@@ -12,7 +16,15 @@ const IntroContent = () => {
         <span className={styles.intro__text}>함께 성장할 수 있는 기회를 기대합니다.</span>
       </div>
       <div className={styles.image__wrap}>
-        <img src="/images/profile.jpeg" alt="profile" />
+        {profileImageUrl && (
+          <Image
+            src={profileImageUrl}
+            alt="Profile"
+            width={500}
+            height={500}
+            layout="responsive"
+          />
+        )}
       </div>
     </>
   );

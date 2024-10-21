@@ -2,18 +2,22 @@
 import React, { useState } from 'react';
 import styles from './Content.module.scss';
 import Link from 'next/link';
-import { portfolios } from '@/data/contents/portfolio';
 import { Link as Site } from 'lucide-react';
 import Modal from '@component/modal/ImageModal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
+import { Portfolio } from '@/types/types';
 
-const PortfolioContent = () => {
+interface PortfolioClientProps {
+  portfolios: Portfolio[];
+}
+
+const PortfolioClient: React.FC<PortfolioClientProps> = ({ portfolios }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
-  const handleImageClick = (image : string) => {
+  const handleImageClick = (image: string) => {
     setSelectedImage(image);
     setIsModalOpen(true);
   };
@@ -65,21 +69,21 @@ const PortfolioContent = () => {
                   ))}
                 </Swiper>
               ) : (
-                  portfolio.image.length > 0 ? (
-                    <img
-                      src={`/images/${portfolio.image[0]}.png`}
-                      alt={portfolio.title}
-                      style={{ cursor: 'pointer', maxWidth: '100%' }}
-                      onClick={() => handleImageClick(`/images/${portfolio.image[0]}.png`)}
-                    />
-                  ) : (
-                    <img src='https://g-lep6tfc2q9.vusercontent.net/placeholder.svg?height=200&width=400' alt="placeholder" />
-                  )
+                portfolio.image.length > 0 ? (
+                  <img
+                    src={`/images/${portfolio.image[0]}.png`}
+                    alt={portfolio.title}
+                    style={{ cursor: 'pointer', maxWidth: '100%' }}
+                    onClick={() => handleImageClick(`/images/${portfolio.image[0]}.png`)}
+                  />
+                ) : (
+                  <img src='https://g-lep6tfc2q9.vusercontent.net/placeholder.svg?height=200&width=400' alt="placeholder" />
+                )
               )}
             </div>
 
             <div className={styles.portfolio__text}>
-            <div className={styles.portfolio__skills}>
+              <div className={styles.portfolio__skills}>
                 {portfolio.skills.map((skill, index) => (
                   <span key={index} className={styles.portfolio__skill}>{skill}</span>
                 ))}
@@ -94,8 +98,6 @@ const PortfolioContent = () => {
                   <Site size={16} /> 바로가기
                 </Link>
               }
-
-
             </div>
           </div>
         ))}
@@ -106,4 +108,4 @@ const PortfolioContent = () => {
   );
 }
 
-export default PortfolioContent;
+export default PortfolioClient;

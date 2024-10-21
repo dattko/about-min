@@ -11,6 +11,9 @@ const nextConfig = {
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   reactStrictMode: true,
+  images: {
+    domains: ['hedsysxulhtslbgsloel.supabase.co'],
+  },
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
