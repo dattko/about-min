@@ -9,11 +9,6 @@
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
-  span{
-    @include responsive($breakpointMedium){
-      font-size: $fontSizeSmall;
-    };
-  }
   .h2 {
     font-size: 32px;
     margin-bottom: 16px;

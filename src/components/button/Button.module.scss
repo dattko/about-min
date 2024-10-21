@@ -5,9 +5,6 @@
   right: 10px;
   z-index: 20;
   transform: translateY(50%);
-  @include responsive($breakpointLarge){
-    right: 8px;
-  };
 
   a{
     align-content: center;
